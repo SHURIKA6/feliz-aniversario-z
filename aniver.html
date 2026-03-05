@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Feliz Aniversário Gabi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Montserrat', sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+background:#111;
+color:white;
+}
+
+/* lado esquerdo */
+
+.frases{
+width:40%;
+background:linear-gradient(180deg,#ff9800,#ff5722);
+padding:40px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.frases h2{
+font-size:35px;
+margin-bottom:30px;
+}
+
+.frase{
+font-size:22px;
+line-height:1.6;
+min-height:120px;
+}
+
+/* lado direito */
+
+.aniversario{
+width:60%;
+padding:40px;
+text-align:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:#1a1a1a;
+}
+
+/* titulo */
+
+h1{
+font-size:60px;
+margin-bottom:10px;
+}
+
+.nome{
+font-size:70px;
+color:#ff9800;
+margin-bottom:20px;
+}
+
+/* galeria */
+
+.galeria{
+display:flex;
+gap:15px;
+margin-top:30px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.galeria img{
+width:160px;
+height:160px;
+object-fit:cover;
+border-radius:12px;
+transition:.3s;
+}
+
+.galeria img:hover{
+transform:scale(1.1);
+}
+
+/* botão */
+
+button{
+margin-top:25px;
+padding:12px 30px;
+border:none;
+border-radius:30px;
+background:#ff9800;
+font-size:18px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff5722;
+color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LADO DAS FRASES -->
+
+<div class="frases">
+
+<h2>Mensagens para Gabi 💛</h2>
+
+<div class="frase" id="frase"></div>
+
+<button onclick="novaFrase()">Nova frase</button>
+
+</div>
+
+
+<!-- LADO DO ANIVERSÁRIO -->
+
+<div class="aniversario">
+
+<h1>Feliz Aniversário</h1>
+
+<div class="nome">Gabi 🎉</div>
+
+<p>
+Que seu dia seja cheio de alegria, música e momentos inesquecíveis.
+</p>
+
+<!-- GALERIA -->
+
+<div class="galeria">
+
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
+<img src="fotoq.png">
+
+</div>
+
+<!-- MUSICA -->
+
+<audio controls autoplay loop style="margin-top:30px">
+<source src="Lugar ao Sol.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<script>
+
+const frases=[
+
+"Gabi, que seu caminho seja cheio de música, alegria e sonhos realizados.",
+
+"Hoje é o dia de celebrar uma pessoa incrível. Feliz aniversário!",
+
+"Que cada momento da sua vida seja tão especial quanto você.",
+
+"Que nunca faltem risadas, aventuras e boas músicas na sua vida.",
+
+"Que esse novo ciclo seja cheio de felicidade e conquistas.",
+
+"Gabi, continue iluminando a vida de todos ao seu redor."
+
+]
+
+function novaFrase(){
+
+let frase=frases[Math.floor(Math.random()*frases.length)]
+
+document.getElementById("frase").innerText=frase
+
+}
+
+novaFrase()
+
+</script>
+
+</body>
+</html>
